@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct POI: Equatable {
+    var location: String
+    var country: String
+    var clues: [String]
+}

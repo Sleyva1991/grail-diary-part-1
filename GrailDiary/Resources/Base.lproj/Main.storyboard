@@ -13,7 +13,7 @@
         <!--Grail Dairy-->
         <scene sceneID="Uz9-wP-OsO">
             <objects>
-                <viewController id="qG2-e9-U10" sceneMemberID="viewController">
+                <viewController id="qG2-e9-U10" customClass="POIsTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ISB-YQ-aXG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rAo-ls-3E7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="POICell" id="rAo-ls-3E7" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rAo-ls-3E7" id="hni-bM-V1v">
@@ -62,6 +62,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesLabel" destination="r5T-hy-6c1" id="wQ7-Nq-peg"/>
+                                            <outlet property="countryLabel" destination="aZc-l5-0y6" id="U3J-a8-CQS"/>
+                                            <outlet property="locationLabel" destination="gcf-YI-XLF" id="Iv9-4g-Wod"/>
                                             <segue destination="xEK-jx-5wb" kind="show" identifier="ShowPOIDetailSegue" id="Oyq-zH-P8z"/>
                                         </connections>
                                     </tableViewCell>
@@ -84,15 +87,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Rm4-90-XrK" id="aG8-li-izG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bb-69-oos" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2526.0869565217395" y="-599.33035714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="lRD-aT-vgU">
             <objects>
-                <viewController id="4bi-UV-M2k" sceneMemberID="viewController">
+                <viewController id="4bi-UV-M2k" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ru-Cs-z14">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,8 +153,16 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkJ-Vd-4uN">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="cLT-oe-loF"/>
-                                    <barButtonItem title="Save" width="254" id="3vN-5w-EDP"/>
+                                    <barButtonItem title="Cancel" id="cLT-oe-loF">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="4bi-UV-M2k" id="kgX-sJ-FLr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Save" width="254" id="3vN-5w-EDP">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="4bi-UV-M2k" id="EZL-Uh-qlu"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Flexible Space" id="goz-Kc-hlg"/>
                                 </items>
                             </toolbar>
@@ -164,15 +178,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bc7-Lh-C05"/>
                     </view>
+                    <connections>
+                        <outlet property="clues1TextField" destination="uTH-dE-qXN" id="vzu-Nc-fXo"/>
+                        <outlet property="clues2TextField" destination="MBr-4f-8bz" id="Vdn-cr-jte"/>
+                        <outlet property="clues3TextField" destination="miz-Bg-Ggh" id="2Sd-CP-mTY"/>
+                        <outlet property="countryTextField" destination="Jko-bg-QE2" id="sss-jn-nge"/>
+                        <outlet property="locationTextField" destination="fVD-8u-Apx" id="9h3-oH-YqI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMs-rh-9U8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3367" y="-599"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="kK5-t6-kXi">
             <objects>
-                <viewController id="xEK-jx-5wb" sceneMemberID="viewController">
+                <viewController id="xEK-jx-5wb" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4T3-Je-9Sz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,6 +249,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xzF-dq-aLa"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesListTextView" destination="37n-IB-MzB" id="Ufh-eV-Grc"/>
+                        <outlet property="countryLabel" destination="5d9-tB-vrF" id="dbZ-ae-iXu"/>
+                        <outlet property="locationLabel" destination="zeJ-Vr-Rxc" id="l4S-tu-fni"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sen-N6-JPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
