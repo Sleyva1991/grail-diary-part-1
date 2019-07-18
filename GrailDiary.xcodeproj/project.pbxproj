@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E8233A9D22DE70DD00A2A1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8233A9C22DE70DD00A2A1B6 /* AppDelegate.swift */; };
-		E8233A9F22DE70DD00A2A1B6 /* CluesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8233A9E22DE70DD00A2A1B6 /* CluesTableViewController.swift */; };
 		E8233AA222DE70DD00A2A1B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8233AA022DE70DD00A2A1B6 /* Main.storyboard */; };
 		E8233AA422DE70DE00A2A1B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8233AA322DE70DE00A2A1B6 /* Assets.xcassets */; };
 		E8233AA722DE70DE00A2A1B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8233AA522DE70DE00A2A1B6 /* LaunchScreen.storyboard */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		E8233A9922DE70DD00A2A1B6 /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8233A9C22DE70DD00A2A1B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8233A9E22DE70DD00A2A1B6 /* CluesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesTableViewController.swift; sourceTree = "<group>"; };
 		E8233AA122DE70DD00A2A1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8233AA322DE70DE00A2A1B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8233AA622DE70DE00A2A1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		E829BBA522DFC712004C8EF0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E8233A9E22DE70DD00A2A1B6 /* CluesTableViewController.swift */,
 				E829BB9B22DFB63F004C8EF0 /* AddPOIViewController.swift */,
 				E829BB9D22DFB66C004C8EF0 /* POIDetailViewController.swift */,
 				E829BBA722DFDB9D004C8EF0 /* POIsTableViewController.swift */,
@@ -184,7 +181,6 @@
 			files = (
 				E829BBA222DFB6BF004C8EF0 /* POI.swift in Sources */,
 				E829BB9C22DFB63F004C8EF0 /* AddPOIViewController.swift in Sources */,
-				E8233A9F22DE70DD00A2A1B6 /* CluesTableViewController.swift in Sources */,
 				E8233A9D22DE70DD00A2A1B6 /* AppDelegate.swift in Sources */,
 				E829BBA822DFDB9D004C8EF0 /* POIsTableViewController.swift in Sources */,
 				E829BBA022DFB6AA004C8EF0 /* POITableViewCell.swift in Sources */,
